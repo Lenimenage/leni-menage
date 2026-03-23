@@ -78,6 +78,14 @@ body::before {
 	animation: gradient-shift 15s ease infinite;
 	pointer-events: none;
 	z-index: -1;
+	will-change: transform;
+}
+
+@media (max-width: 768px) {
+	body::before {
+		background: radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
+					radial-gradient(circle at 80% 80%, rgba(0, 217, 255, 0.02) 0%, transparent 50%);
+	}
 }
 
 @keyframes gradient-shift {
@@ -974,8 +982,23 @@ section {
 		--spacing-2xl: 2.5rem;
 	}
 	
+	/* Ensure dark background on mobile */
+	body {
+		background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%) !important;
+		background-attachment: fixed !important;
+	}
+	
+	main {
+		background: transparent;
+	}
+	
+	section {
+		background-color: transparent !important;
+	}
+	
 	.navbar {
 		padding: var(--spacing-sm) 0;
+		background: rgba(15, 23, 37, 0.98) !important;
 	}
 	
 	.nav-menu {
@@ -985,7 +1008,7 @@ section {
 		right: 0;
 		flex-direction: column;
 		gap: 0;
-		background: rgba(15, 23, 37, 0.95);
+		background: rgba(15, 23, 37, 0.99);
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height var(--transition-normal);
@@ -1070,19 +1093,59 @@ section {
 	main {
 		padding-top: 70px;
 	}
+	
+	/* Fix text visibility on mobile cards */
+	.about-card,
+	.skill-category,
+	.timeline-content,
+	.project-card,
+	.contact-card {
+		background: rgba(26, 35, 50, 0.9) !important;
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(0, 217, 255, 0.2) !important;
+	}
+	
+	.about-card h3,
+	.skill-category h3,
+	.timeline-content h3,
+	.project-card h3,
+	.contact-card h3 {
+		color: var(--text-primary) !important;
+	}
+	
+	.about-card p,
+	.skill-category p,
+	.timeline-description,
+	.project-description,
+	.contact-card p {
+		color: var(--text-secondary) !important;
+	}
+	
+	p, span, a, li {
+		color: var(--text-primary) !important;
+	}
 }
 
 @media (max-width: 480px) {
+	/* Force dark background on small screens */
+	body {
+		background: linear-gradient(135deg, #0a0f1a 0%, #121829 100%) !important;
+		background-attachment: fixed !important;
+	}
+	
 	h1 {
 		font-size: 2rem;
+		color: var(--text-primary) !important;
 	}
 	
 	.hero-title {
 		font-size: 2rem;
+		color: var(--text-primary) !important;
 	}
 	
 	.hero-subtitle {
 		font-size: 1rem;
+		color: var(--accent-primary) !important;
 	}
 	
 	.hero-cta {
@@ -1106,5 +1169,19 @@ section {
 	
 	.footer-content p {
 		flex: none;
+		color: var(--text-muted) !important;
+	}
+	
+	/* Extra text color fixes for small screens */
+	h2, h3, h4, h5, h6 {
+		color: var(--text-primary) !important;
+	}
+	
+	p, .timeline-description, .project-description, .about-card p {
+		color: var(--text-secondary) !important;
+	}
+	
+	section {
+		background-color: transparent !important;
 	}
 }
