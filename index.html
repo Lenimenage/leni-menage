@@ -3,68 +3,337 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>My Portfolio & CV</title>
+	<meta name="description" content="Léni Menage - Web Developer & BTS SIO Student. Modern portfolio showcasing web development projects and technical skills.">
+	<meta name="keywords" content="web developer, portfolio, BTS SIO, HTML, CSS, JavaScript">
+	<meta name="author" content="Léni Menage">
+	<title>Léni Menage - Web Developer Portfolio</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 	<script defer src="script.js"></script>
 </head>
 <body>
-	<header>
-		<h1>Léni MENAGE</h1>
-		<p>STUDENT IN BTS SIO</p>
-		<nav>
-			<a href="#profile">Profile</a>
-			<a href="#contact">Contact</a>
-			<a href="#cv">CV</a>
-			<a href="#portfolio">Portfolio</a>
-		</nav>
-	</header>
+	<!-- Navigation Bar -->
+	<nav class="navbar">
+		<div class="nav-container">
+			<span class="logo">Léni MENAGE</span>
+			<button class="nav-toggle" aria-label="Toggle navigation">
+				<span></span><span></span><span></span>
+			</button>
+			<div class="nav-menu">
+				<a href="#hero" class="nav-link">Home</a>
+				<a href="#about" class="nav-link">About</a>
+				<a href="#skills" class="nav-link">Skills</a>
+				<a href="#projects" class="nav-link">Projects</a>
+				<a href="#contact" class="nav-link">Contact</a>
+			</div>
+		</div>
+	</nav>
+
 	<main>
-		<section id="profile">
-			<h2>Profile</h2>
-			<div class="profile">
-				<img src="photodemoi2.JPG" alt="Profile Photo">
-				<div class="profile-info">
-					<p>Hello! I'm <strong>Léni</strong>, a passionate earlier web developer and technician with a little experience in building websites. I have knowledge and experience in management and marketing. I love solving problems and creating beautiful digital experiences.</p>
+		<!-- Hero Section -->
+		<section id="hero" class="hero">
+			<div class="hero-content">
+				<div class="hero-text">
+					<h1 class="hero-title">Hi, I'm <span class="highlight">Léni</span></h1>
+					<p class="hero-subtitle">Web Developer & BTS SIO Student</p>
+					<p class="hero-description">Passionate about crafting beautiful, functional digital experiences. Specialized in modern web development with expertise in HTML, CSS, and JavaScript.</p>
+					<div class="hero-cta">
+						<a href="#projects" class="btn btn-primary">View My Work</a>
+					<a href="CV_Leni_Menage.pdf" download class="btn btn-secondary">
+						<i class="fas fa-download"></i> Download CV
+					</a>
+					</div>
+				</div>
+				<div class="hero-image">
+					<div class="image-wrapper">
+						<img src="photodemoi2.JPG" alt="Léni Menage - Web Developer"/>
+						<div class="image-accent"></div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll-indicator">
+				<i class="fas fa-chevron-down"></i>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="about">
+			<div class="section-header">
+				<h2>About Me</h2>
+				<div class="header-underline"></div>
+			</div>
+			<div class="about-grid">
+				<div class="about-card">
+					<div class="card-icon">
+						<i class="fas fa-code"></i>
+					</div>
+					<h3>Developer</h3>
+					<p>Self-taught and passionate about web development. I create clean, responsive, and user-friendly websites that solve real problems.</p>
+				</div>
+				<div class="about-card">
+					<div class="card-icon">
+						<i class="fas fa-graduation-cap"></i>
+					</div>
+					<h3>Student</h3>
+					<p>Pursuing BTS SIO (Advanced Technician Diploma in IT Services). Strong foundation in IT infrastructure and business technology.</p>
+				</div>
+				<div class="about-card">
+					<div class="card-icon">
+						<i class="fas fa-laptop"></i>
+					</div>
+					<h3>Learner</h3>
+					<p>Constantly exploring new technologies and best practices. I believe in continuous improvement and staying current with industry trends.</p>
 				</div>
 			</div>
 		</section>
-		<section id="contact">
-			<h2>Contact</h2>
-			<ul class="contact-list">
-				<li><strong>Email:</strong> leni.menage@outlook.fr</li>
-				<li><strong>N°:</strong> 06 16 58 58 06</li>
 
-		</section>
-		<section id="cv">
-			<h2>Curriculum Vitae</h2>
-			<ul class="cv-list">
-				<li><strong>Education:</strong> Bac STMG, BTS SIO, My Digital School, 2025</li>
-				<li><strong>Experience:</strong> Stage of Web Developer at Kaluna Tachnology</li>
-				<li><strong>Skills:</strong> HTML, CSS, Github, MarkDown</li>
-				<li><strong>Languages:</strong> English (intermediate), French (fluent)</li>
-			</ul>
-		</section>
-		<section id="portfolio">
-			<h2>Portfolio</h2>
-			<ul class="portfolio-list">
-				<li>
-					<strong>Project One</strong> – A modern web app for task management.<br>
-					<a href="https://tm.leni-menage.fr" target="_blank">View Project</a>
-				</li>
+		<!-- Skills Section -->
+		<section id="skills" class="skills">
+			<div class="section-header">
+				<h2>Skills & Expertise</h2>
+				<div class="header-underline"></div>
+			</div>
+			<div class="skills-container">
+				<!-- Frontend Skills -->
+				<div class="skill-category">
+					<h3>Frontend Development</h3>
+					<div class="skill-tags">
+						<span class="skill-tag skill-advanced">
+							<i class="fab fa-html5"></i> HTML5
+						</span>
+						<span class="skill-tag skill-advanced">
+							<i class="fab fa-css3-alt"></i> CSS3
+						</span>
+						<span class="skill-tag skill-intermediate">
+							<i class="fab fa-js"></i> JavaScript
+						</span>
+						<span class="skill-tag skill-beginner">
+							<i class="fab fa-react"></i> Responsive Design
+						</span>
+					</div>
+				</div>
 
-				<li>
-					<strong>Project Two</strong> A Password Generator.<br>
-					<a href="https://sparrow7y.github.io/password_generator/" target="_blank">View Project</a>
-				</li>
-				<!--<li>
-					<strong>Project Three</strong> – Manage subscriptions.<br>
-					<a href="#" target="_blank">View Project</a>
-				</li>-->
-			</ul>
+				<!-- Tools & Technologies -->
+				<div class="skill-category">
+					<h3>Tools & Technologies</h3>
+					<div class="skill-tags">
+						<span class="skill-tag skill-advanced">
+							<i class="fab fa-github"></i> GitHub
+						</span>
+						<span class="skill-tag skill-advanced">
+							<i class="fas fa-file-lines"></i> Markdown
+						</span>
+						<span class="skill-tag skill-intermediate">
+							<i class="fas fa-terminal"></i> Command Line
+						</span>
+						<span class="skill-tag skill-intermediate">
+							<i class="fas fa-figma"></i> Design Thinking
+						</span>
+					</div>
+				</div>
+
+				<!-- Soft Skills -->
+				<div class="skill-category">
+					<h3>Professional Skills</h3>
+					<div class="skill-tags">
+						<span class="skill-tag skill-advanced">
+							<i class="fas fa-people-group"></i> Communication
+						</span>
+						<span class="skill-tag skill-advanced">
+							<i class="fas fa-lightbulb"></i> Problem Solving
+						</span>
+						<span class="skill-tag skill-intermediate">
+							<i class="fas fa-chart-line"></i> Project Management
+						</span>
+						<span class="skill-tag skill-intermediate">
+							<i class="fas fa-language"></i> English (Intermediate)
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience Section -->
+		<section id="experience" class="experience">
+			<div class="section-header">
+				<h2>Experience & Education</h2>
+				<div class="header-underline"></div>
+			</div>
+			<div class="timeline">
+				<div class="timeline-item">
+					<div class="timeline-marker">
+						<i class="fas fa-briefcase"></i>
+					</div>
+					<div class="timeline-content">
+						<h3>Web Developer Intern</h3>
+						<p class="timeline-company">Kaluna Technology</p>
+						<p class="timeline-description">Developed and maintained web applications, collaborated with team members, and gained hands-on experience in modern web development practices.</p>
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<div class="timeline-marker">
+						<i class="fas fa-book"></i>
+					</div>
+					<div class="timeline-content">
+						<h3>BTS SIO (Advanced Technician Diploma)</h3>
+						<p class="timeline-company">My Digital School, 2025</p>
+						<p class="timeline-description">Comprehensive IT program covering web development, infrastructure, and business technology. Strong focus on practical, industry-relevant skills.</p>
+					</div>
+				</div>
+
+				<div class="timeline-item">
+					<div class="timeline-marker">
+						<i class="fas fa-certificate"></i>
+					</div>
+					<div class="timeline-content">
+						<h3>High School Diploma (STMG)</h3>
+						<p class="timeline-company">Management & Technology Studies</p>
+						<p class="timeline-description">Foundation in business management and information technology, developing analytical and digital skills.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="projects">
+			<div class="section-header">
+				<h2>Featured Projects</h2>
+				<div class="header-underline"></div>
+			</div>
+			<div class="projects-grid">
+				<!-- Project 1 -->
+				<div class="project-card">
+					<div class="project-header">
+						<div class="project-icon">
+							<i class="fas fa-tasks"></i>
+						</div>
+						<h3>Task Management App</h3>
+					</div>
+					<p class="project-description">A modern, responsive web application for managing your daily tasks efficiently. Features include task creation, editing, and real-time updates with a clean, intuitive interface.</p>
+					<div class="project-tech">
+						<span class="tech-tag">HTML5</span>
+						<span class="tech-tag">CSS3</span>
+						<span class="tech-tag">JavaScript</span>
+					</div>
+					<div class="project-links">
+						<a href="https://tm.leni-menage.fr" target="_blank" class="project-link">
+							<i class="fas fa-external-link-alt"></i> View Live
+						</a>
+						<a href="#" class="project-link">
+							<i class="fas fa-code"></i> Source Code
+						</a>
+					</div>
+				</div>
+
+				<!-- Project 2 -->
+				<div class="project-card">
+					<div class="project-header">
+						<div class="project-icon">
+							<i class="fas fa-key"></i>
+						</div>
+						<h3>Password Generator</h3>
+					</div>
+					<p class="project-description">A secure, customizable password generator with multiple options. Allows users to create strong passwords of varying complexity levels with a single click.</p>
+					<div class="project-tech">
+						<span class="tech-tag">HTML5</span>
+						<span class="tech-tag">CSS3</span>
+						<span class="tech-tag">JavaScript</span>
+					</div>
+					<div class="project-links">
+						<a href="https://sparrow7y.github.io/password_generator/" target="_blank" class="project-link">
+							<i class="fas fa-external-link-alt"></i> View Live
+						</a>
+						<a href="#" class="project-link">
+							<i class="fas fa-code"></i> Source Code
+						</a>
+					</div>
+				</div>
+
+				<!-- Coming Soon Card -->
+				<div class="project-card coming-soon">
+					<div class="project-header">
+						<div class="project-icon">
+							<i class="fas fa-rocket"></i>
+						</div>
+						<h3>Coming Soon</h3>
+					</div>
+					<p class="project-description">I'm working on exciting new projects. Stay tuned for updates! Follow me on GitHub to see what I'm currently building.</p>
+					<div class="project-tech">
+						<span class="tech-tag">Stay Updated</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="contact">
+			<div class="section-header">
+				<h2>Let's Connect</h2>
+				<div class="header-underline"></div>
+			</div>
+			<div class="contact-content">
+				<p class="contact-intro">I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+				
+				<div class="contact-methods">
+					<a href="mailto:leni.menage@outlook.fr" class="contact-card">
+						<div class="contact-icon">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<h3>Email</h3>
+						<p>leni.menage@outlook.fr</p>
+					</a>
+
+					<a href="tel:+33616585806" class="contact-card">
+						<div class="contact-icon">
+							<i class="fas fa-phone"></i>
+						</div>
+						<h3>Phone</h3>
+						<p>+33 6 16 58 58 06</p>
+					</a>
+
+					<a href="CV_Leni_Menage.pdf" download class="contact-card">
+						<div class="contact-icon">
+							<i class="fas fa-file-pdf"></i>
+						</div>
+						<h3>Download CV</h3>
+						<p>View My Résumé</p>
+					</a>
+
+					<a href="https://github.com/Lenimenage" target="_blank" class="contact-card">
+						<div class="contact-icon">
+							<i class="fab fa-github"></i>
+						</div>
+						<h3>GitHub</h3>
+						<p>Follow My Work</p>
+					</a>
+
+					<a href="https://www.linkedin.com/in/leni-menage-29292a3b2" target="_blank" class="contact-card">
+						<div class="contact-icon">
+							<i class="fab fa-linkedin"></i>
+						</div>
+						<h3>LinkedIn</h3>
+						<p>Connect With Me</p>
+					</a>
+				</div>
+
+				<div class="cta-section">
+					<a href="mailto:leni.menage@outlook.fr" class="btn btn-primary btn-large">Send Me an Email</a>
+				</div>
+			</div>
 		</section>
 	</main>
-	<footer>
-		&copy; 2025 Léni Menage. All rights reserved.
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-content">
+			<p>&copy; 2025 Léni Menage. All rights reserved.</p>
+			<div class="social-links">
+				<a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+				<a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+				<a href="mailto:leni.menage@outlook.fr" aria-label="Email"><i class="fas fa-envelope"></i></a>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
