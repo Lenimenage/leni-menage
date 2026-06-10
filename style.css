@@ -546,6 +546,12 @@ section {
 	transform: translateY(-2px);
 }
 
+.skill-divider {
+	border: none;
+	border-top: 1px solid var(--border-color);
+	margin: var(--spacing-md) 0;
+}
+
 /* ===== EXPERIENCE SECTION ===== */
 .experience {
 	background: transparent;
